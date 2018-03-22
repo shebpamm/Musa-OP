@@ -10,13 +10,35 @@ module.exports = function(grunt) {
 		pkg: grunt.file.readJSON('package.json'),
 		meta: {
 			banner:
-				'/*!\n' +
-				' * reveal.js <%= pkg.version %> (<%= grunt.template.today("yyyy-mm-dd, HH:MM") %>)\n' +
-				' * http://revealjs.com\n' +
-				' * MIT licensed\n' +
-				' *\n' +
-				' * Copyright (C) 2017 Hakim El Hattab, http://hakim.se\n' +
-				' */'
+			'/*!\n' +
+			' * reveal.js <%= pkg.version %> (<%= grunt.template.today("yyyy-mm-dd, HH:MM") %>)\n' +
+			' * http://revealjs.com\n' +
+			' * MIT licensed\n' +
+			' *\n' +
+			' * Copyright (C) 2017 Hakim El Hattab, http://hakim.se\n' +
+			' */'
+		},
+
+		express: {
+			options: {
+				// Override defaults here
+			},
+			dev: {
+				options: {
+					script: 'path/to/dev/server.js'
+				}
+			},
+			prod: {
+				options: {
+					script: 'path/to/prod/server.js',
+					node_env: 'production'
+				}
+			},
+			test: {
+				options: {
+					script: 'path/to/test/server.js'
+				}
+			}
 		},
 
 		qunit: {
@@ -164,7 +186,8 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks( 'grunt-retire' );
 	grunt.loadNpmTasks( 'grunt-sass' );
 	grunt.loadNpmTasks( 'grunt-zip' );
-	
+	grunt.loadNpmTasks('grunt-express-server');
+
 	// Default task
 	grunt.registerTask( 'default', [ 'css', 'js' ] );
 
