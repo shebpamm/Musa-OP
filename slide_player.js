@@ -1,11 +1,12 @@
 samples = [
   new Howl({src: ['samples/1.mp3']}),
-  new Howl({src: ['samples/1.mp3']}),
-  new Howl({src: ['samples/1.mp3']}),
-  new Howl({src: ['samples/1.mp3']}),
-  new Howl({src: ['samples/1.mp3']}),
-  new Howl({src: ['samples/1.mp3']}),
-  new Howl({src: ['samples/1.mp3']}),
+  new Howl({src: ['samples/2.mp3']}),
+  new Howl({src: ['samples/3.mp3']}),
+  new Howl({src: ['samples/4.mp3']}),
+  new Howl({src: ['samples/5.mp3']}),
+  new Howl({src: ['samples/6.mp3']}),
+  new Howl({src: ['samples/7.mp3']}),
+  new Howl({src: ['samples/8.mp3']}),
 ]
 
 

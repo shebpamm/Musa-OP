@@ -61,6 +61,21 @@ var presentation = io.on('connection', function (socket) {
 
 	});
 
+	socket.on('frag-changed', function(data){
+
+		// Check the secret key again
+
+
+		if(data.key === secret) {
+
+			// Tell all connected clients to navigate to the new slide
+
+			presentation.emit('frag-move', {sender: data.sender
+			});
+		}
+
+	});
+
 });
 
 console.log('Your presentation is running on http://localhost:' + port);
