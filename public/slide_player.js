@@ -18,7 +18,10 @@ samples = [
   new Howl({src: ['samples/6.mp3']}),
   new Howl({src: ['samples/7.mp3']}),
   new Howl({src: ['samples/8.mp3']}),
-  new Howl({src: ['samples/9.mp3']})
+  new Howl({src: ['samples/9.mp3']}),
+  new Howl({src: ['samples/10.mp3']}),
+  new Howl({src: ['samples/11.mp3']}),
+  new Howl({src: ['samples/12.mp3']})
 ]
 
 function killAll() {
